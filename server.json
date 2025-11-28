@@ -1,0 +1,13 @@
+{
+  "schedules": [
+    {
+      "id": "1",
+      "tutorName": "jeferson nascimento",
+      "petName": "Buddy",
+      "phoneNumber": "5566912345678",
+      "serviceDescription": "corte unhas e banho",
+      "date": "2025-11-30",
+      "time": "14:00"
+    }
+  ]
+}
