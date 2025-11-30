@@ -1,12 +1,184 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mundo Pet Agendamento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
-  <h1>Ola teste</h1>
-  
+  <div class="logo">
+    <img src="assets/Dog-Duotone--Streamline-Phosphor.svg" alt=""> MUNDO PET
+  </div>
+  <div id="app">
+    <header>
+      <h1>Sua agenda</h1>
+      <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+      <div class="input">
+        <i><img src="assets/Calendar-Minimalistic.svg" alt=""></i>
+        <input type="date" name="date" id="date">
+      </div>
+    </header>
+
+    <section class="morning">
+      <aside>
+        <span>
+          <img src="assets/morning.svg" alt="">
+          <h2>Manhã</h2>
+        </span>
+        <span>09h-12h</span>
+      </aside>
+      <ul class="schedules">
+        <li>
+          <span>
+            <strong id="time">13:00</strong>
+            <strong id="pet-name">Mel</strong> /
+            <small id="tutor-name">Jeferson nascimento</small>
+          </span>
+          <p>Corte de Unhas</p>
+          <div data-type="remover" class="remove">Remover Agendamento</div>
+        </li>
+        <li>
+          <span>
+            <strong id="time">13:00</strong>
+            <strong id="pet-name">Mel</strong> /
+            <small id="tutor-name">Jeferson nascimento</small>
+          </span>
+          <p>Corte de Unhas</p>
+          <div data-type="remover" class="remove">Remover Agendamento</div>
+        </li>
+      </ul>
+    </section>
+    <section class="afternoon">
+      <aside>
+        <span>
+          <img src="assets/afternoon.svg" alt="">
+          <h2>Tarde</h2>
+        </span>
+        <span>13h-18h</span>
+      </aside>
+      <ul class="schedules">
+        <li>
+          <span>
+            <strong id="time">13:00</strong>
+            <strong id="pet-name">Mel</strong> /
+            <small id="tutor-name">Jeferson nascimento</small>
+          </span>
+          <p>Corte de Unhas</p>
+          <div data-type="remover" class="remove">Remover Agendamento</div>
+        </li>
+        <li>
+          <span>
+            <strong id="time">13:00</strong>
+            <strong id="pet-name">Mel</strong> /
+            <small id="tutor-name">Jeferson nascimento</small>
+          </span>
+          <p>Corte de Unhas</p>
+          <div data-type="remover" class="remove">Remover Agendamento</div>
+        </li>
+      </ul>
+    </section>
+    <section class="night">
+      <aside>
+        <span>
+          <img src="assets/night.svg" alt="">
+          <h2>Noite</h2>
+        </span>
+        <span>19h-21h</span>
+      </aside>
+      <ul class="schedules">
+        <li>
+          <span>
+            <strong id="time">13:00</strong>
+            <strong id="pet-name">Mel</strong> /
+            <small id="tutor-name">Jeferson nascimento</small>
+          </span>
+          <p>Corte de Unhas</p>
+          <div data-type="remover" class="remove">Remover Agendamento</div>
+        </li>
+        <li>
+          <span>
+            <strong id="time">13:00</strong>
+            <strong id="pet-name">Mel</strong> /
+            <small id="tutor-name">Jeferson nascimento</small>
+          </span>
+          <p>Corte de Unhas</p>
+          <div data-type="remover" class="remove">Remover Agendamento</div>
+        </li>
+      </ul>
+    </section>
+
+
+
+  </div>
+
+  <div id="modal-overlay" class="overlay hidden"></div>
+  <div id="modal-form" class="modal-form hidden" role="dialog" aria-modal="true">
+    <div class="content-modal">
+      <div class="btn-close">
+        <img src="assets/Close-Small-Fill--Streamline-Rounded-Fill---Material-Symbols.svg" alt="">
+    </div>
+      <h2>Agende um atendimento</h2>
+      <p>Preencha os dados do cliente para realizar o agendamento.</p>
+      <form>
+        <label for="name">Nome do Tutor</label>
+        <div class="input">
+          <i><img src="assets/User--Streamline-Solar.svg" alt=""></i>
+          <input type="text" id="name" placeholder="Digite seu nome" autocomplete="true">
+        </div>
+
+        <label for="pet">Nome do pet</label>
+        <div class="input">
+          <i><img src="assets/Pet-Paw--Streamline-Core.svg" alt=""></i>
+          <input type="text" id="pet" placeholder="Digite o nome do pet">
+        </div>
+
+        <label for="phone-number">Telefone</label>
+        <div class="input">
+          <i><img src="assets/Phone--Streamline-Solar.svg" alt=""></i>
+          <input type="text" id="phone-number" placeholder="(66) 9 0000-0000">
+        </div>
+
+        <label for="description">Descrição do serviço</label>
+        <div class="input">
+          <textarea name="description" id="description" placeholder="Banho e tosa" rows="3"></textarea>
+        </div>
+
+        <div class="date-time">
+          <div>
+            <label for="date">Data</label>
+            <div class="input">
+              <i><img src="assets/Calendar-Minimalistic.svg" alt=""></i>
+              <input type="date" id="date">
+            </div>
+          </div>
+
+          <div>
+            <label for="hour">Hora</label>
+            <div class="input">
+              <i><img src="assets/Clock-Circle--Streamline-Solar.svg" alt=""></i>
+              <input type="time" id="hour">
+            </div>
+          </div>
+        </div>
+
+        <div class="button-submit">
+          <button type="submit">Agendar</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+  <footer>
+    <button data-type="new-schedule">Novo Agendamento </button>
+  </footer>
+
 </body>
+
 </html>

@@ -1,0 +1,56 @@
+input[type="date"], input[type="time"]{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+
+  &::-webkit-calendar-picker-indicator {
+
+    background-image: url(../assets/Icon-white.svg);
+  }
+
+  max-width: fit-content;
+}
+
+.input {
+  position: relative;
+  margin: .5rem 0 1.6rem;
+
+
+  & i {
+    position: absolute;
+
+    top: 50%;
+    left: 5px;
+
+    transform: translateY(-50%);
+  }
+
+
+  & input {
+    border: 1px solid var(--border-primary);
+    background: none;
+
+    width: 100%;
+
+    border-radius: .5rem;
+    padding: .8rem .8rem .8rem 3rem;
+
+    color: var(--content-secondary);
+    font: var(--font-md)
+
+  }
+
+  & textarea {
+    border: 1px solid var(--border-primary);
+    background: none;
+
+    width: 100%;
+
+    border-radius: .5rem;
+    padding: 1rem;
+
+  }
+}
+
+

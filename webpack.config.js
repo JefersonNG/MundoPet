@@ -8,13 +8,14 @@ module.exports = {
     index: './src/main.js'
   },
   output: {
-    filename: '[name].js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, "dist"),
     clean: true
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html'
+      template: './index.html',
+      favicon: path.resolve(__dirname, "src", "assets", "Dog-Duotone--Streamline-Phosphor.svg")
     }),
     new CopyPlugin({
       patterns: [

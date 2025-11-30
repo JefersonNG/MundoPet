@@ -1,0 +1,17 @@
+header {
+  padding: 5rem 0 2rem 0;
+
+  position: relative;
+
+  margin-inline: auto;
+  max-width: 768px;
+
+  & h1 {
+    font: var(--font-head-lg)
+  }
+
+  & p {
+    font: var(--font-md);
+    color: var(--content-secondary)
+  }
+}

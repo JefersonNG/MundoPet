@@ -1,9 +1,71 @@
+:root {
+  
+  --content-primary: #ffffff;
+  --content-secondary: #98959D;
+  --content-tertiary: #666;
+  --content-brand: #9282FA ;
+  --border-primary: #3E3C41;
+  --bg-color-primary: #14151D;
+  --bg-color-secondary: #2E2C30;
+  --color-text-button: #050505;
+
+  --ff-primary: "Inter", sans-serif;
+  --ff-secondary: "Inter Tight", sans-serif;
+
+  --font-head-sm: 700 1.4rem/170% var(--ff-primary);
+  --font-head-md: 700 1.6rem/150% var(--ff-secondary);
+  --font-head-lg: 700 2.4rem/133% var(--ff-secondary);
+
+  --font-sm: 500 1.4rem/170% var(--ff-primary);
+  --font-md: 400 1.6rem/150% var(--ff-primary);
+  --font-paragraph-small: 400 1.2rem/133% var(--ff-primary);
+
+}
+
+html { 
+  font-size: 62.5%; 
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
+  font-size: 1.6rem;
+} 
+
+.logo {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    background-color: var(--bg-color-secondary);
+
+    padding: .6rem;
+    border-radius: 0 0 1.6rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+
+    font: 700 1.6rem/150% "Familjen Grotesk", sans-serif;
+    text-transform: uppercase;
+
+    color: var(--content-brand)
+  }
+
+
+#app {
+  position: relative;
+  background-color: var(--bg-color-primary);
+  color: var(--content-primary);
+  
+  width: 100%;
+  overflow: auto;
+
+  padding-inline: 2rem;
+  padding-bottom: 5rem ;
 }
 
-h1 {
-  color: aqua;
-}

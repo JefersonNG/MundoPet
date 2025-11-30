@@ -1,0 +1,43 @@
+@media (min-width: 1024px) {
+
+
+  section ul li {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+
+
+    & span strong:first-child {
+      margin-right: 2rem;
+    }
+  }
+
+  body footer {
+    max-width: fit-content;
+
+    position: fixed;
+
+    right: 10rem;
+    bottom: 0;
+  }
+
+
+  .date-time {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+
+    & div {
+      width: 100%;
+
+      &>input {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .modal-content > .btn-close {
+    display: none;
+  }
+
+}

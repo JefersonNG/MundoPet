@@ -1,0 +1,84 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(39, 39, 44, 0.747);
+  z-index: 10;
+
+  backdrop-filter: blur(5px);
+}
+
+.modal-form {
+  color: var(--content-primary);
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & .content-modal {
+    background: #23242C;
+    padding: 24px;
+
+    width: 90%;
+    max-width: 450px;
+    max-height: 80vh;
+    overflow-y: auto;
+
+    margin: 1.2rem;
+
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+
+    & .btn-close {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+
+      cursor: pointer;
+
+    }
+
+    & h2 {
+      font: var(--font-head-lg);
+      margin-bottom: .5rem;
+    }
+
+    & p {
+      font: var(--font-paragraph-small);
+      color: var(--content-tertiary);
+
+      margin-bottom: 2rem;
+    }
+
+    & .button-submit {
+      width: 100%;
+      text-align: end;
+    }
+
+
+
+    & label {
+      font: var(--font-sm);
+    }
+
+    .date-time {
+
+
+      & div {
+        width: 100%;
+
+        &>input {
+          max-width: 100%;
+        }
+      }
+    }
+
+  }
+}
+
+.hidden {
+  display: flex;
+}
