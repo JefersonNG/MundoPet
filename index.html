@@ -22,7 +22,7 @@
       <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
       <div class="input">
         <i><img src="assets/Calendar-Minimalistic.svg" alt=""></i>
-        <input type="date" name="date" id="date">
+        <input type="date" name="date-search" id="date-search">
       </div>
     </header>
 
@@ -34,7 +34,7 @@
         </span>
         <span>09h-12h</span>
       </aside>
-      <ul class="schedules">
+      <ul class="schedules" id="morning-list">
         <li>
           <span>
             <strong id="time">13:00</strong>
@@ -63,7 +63,7 @@
         </span>
         <span>13h-18h</span>
       </aside>
-      <ul class="schedules">
+      <ul class="schedules" id="afternoon-list">
         <li>
           <span>
             <strong id="time">13:00</strong>
@@ -84,7 +84,7 @@
         </li>
       </ul>
     </section>
-    <section class="night">
+    <section class="night" id="night-list">
       <aside>
         <span>
           <img src="assets/night.svg" alt="">
@@ -127,43 +127,45 @@
       <h2>Agende um atendimento</h2>
       <p>Preencha os dados do cliente para realizar o agendamento.</p>
       <form>
-        <label for="name">Nome do Tutor</label>
+        <label for="name-form">Nome do Tutor</label>
         <div class="input">
           <i><img src="assets/User--Streamline-Solar.svg" alt=""></i>
-          <input type="text" id="name" placeholder="Digite seu nome" autocomplete="true">
+          <input type="text" id="name-form" placeholder="Digite seu nome" required>
         </div>
 
-        <label for="pet">Nome do pet</label>
+        <label for="pet-form">Nome do pet</label>
         <div class="input">
           <i><img src="assets/Pet-Paw--Streamline-Core.svg" alt=""></i>
-          <input type="text" id="pet" placeholder="Digite o nome do pet">
+          <input type="text" id="pet-form" required placeholder="Digite o nome do pet">
         </div>
 
-        <label for="phone-number">Telefone</label>
+        <label for="phone-number-form">Telefone</label>
         <div class="input">
           <i><img src="assets/Phone--Streamline-Solar.svg" alt=""></i>
-          <input type="text" id="phone-number" placeholder="(66) 9 0000-0000">
+          <input type="text" id="phone-number-form" required placeholder="(66) 9 0000-0000" minlength="8">
         </div>
 
-        <label for="description">Descrição do serviço</label>
+        <label for="description-form">Descrição do serviço</label>
         <div class="input">
-          <textarea name="description" id="description" placeholder="Banho e tosa" rows="3"></textarea>
+          <textarea name="description" id="description-form" placeholder="Banho e tosa" rows="3" required minlength="8"></textarea>
         </div>
 
         <div class="date-time">
           <div>
-            <label for="date">Data</label>
+            <label for="date-form">Data</label>
             <div class="input">
               <i><img src="assets/Calendar-Minimalistic.svg" alt=""></i>
-              <input type="date" id="date">
+              <input type="date" id="date-form" name="date-form">
             </div>
           </div>
 
           <div>
-            <label for="hour">Hora</label>
-            <div class="input">
+            <label for="hour-form">Hora</label>
+            <div class="input wrap-select">
               <i><img src="assets/Clock-Circle--Streamline-Solar.svg" alt=""></i>
-              <input type="time" id="hour">
+              <select name="hour-form" id="hour-form">
+                
+              </select>
             </div>
           </div>
         </div>

@@ -1,16 +1,56 @@
-input[type="date"], input[type="time"]{
+input[type="date"] {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  max-width: fit-content;
+
+  color: var(--content-tertiary);
+  font: var(--font-sm);
 
 
   &::-webkit-calendar-picker-indicator {
 
     background-image: url(../assets/Icon-white.svg);
+    cursor: pointer;
   }
-
-  max-width: fit-content;
 }
+
+select {
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  cursor: pointer;
+
+  & option {
+    color: var(--content-secondary);
+    font: var(--font-sm);
+  }
+}
+
+.wrap-select::after {
+
+  content: '';
+  pointer-events: none;
+
+  background-image: url(../assets/Icon-white.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  width: 1.6rem;
+  height: 2rem;
+
+  position: absolute;
+  right: 1rem;
+  top: 0;
+
+  transform: translateY(50%);
+
+}
+
+
 
 .input {
   position: relative;
@@ -23,11 +63,15 @@ input[type="date"], input[type="time"]{
     top: 50%;
     left: 5px;
 
+    width: 2rem;
+    height: 2rem;
+
     transform: translateY(-50%);
   }
 
 
-  & input {
+  & input,
+  & select {
     border: 1px solid var(--border-primary);
     background: none;
 
@@ -38,7 +82,11 @@ input[type="date"], input[type="time"]{
 
     color: var(--content-secondary);
     font: var(--font-md)
+  }
 
+  & input::placeholder {
+    color: var(--content-tertiary);
+    font: var(--font-sm)
   }
 
   & textarea {
@@ -52,5 +100,3 @@ input[type="date"], input[type="time"]{
 
   }
 }
-
-
