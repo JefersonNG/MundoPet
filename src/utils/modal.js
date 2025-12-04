@@ -1,4 +1,5 @@
 import { loadHoursAvailable } from "../module/form/loadHours"
+import { view } from "../module/schedules/load"
 
 const openModal = document.querySelector('button[data-type="new-schedule"]')
 const closeModal = document.querySelector('.btn-close img')
@@ -11,6 +12,8 @@ openModal.addEventListener("click", (e) => {
   overlay.classList.remove("hidden")
   modal.classList.remove('hidden')
 
+  
+
   loadHoursAvailable()
 
   document.body.style.overflow = "hidden"
@@ -20,6 +23,8 @@ openModal.addEventListener("click", (e) => {
 closeModal.addEventListener('click', (e) => {
   overlay.classList.add("hidden")
   modal.classList.add('hidden')
+
+  view()
 
   document.body.style.overflow = ""
 })

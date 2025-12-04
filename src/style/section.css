@@ -15,8 +15,6 @@ section {
 
     padding: 2rem;
 
-    border-bottom: 1px solid var(--border-primary);
-
     & span {
       display: flex;
       align-items: center;
@@ -32,8 +30,14 @@ section {
     }
   }
 
+
+
   & ul {
 
+    &:has(li) {
+      border-top: 1px solid var(--border-primary);
+
+    }
 
     & li {
 
@@ -44,7 +48,7 @@ section {
       margin: 0 2rem;
       padding: 2rem 0;
 
-      & span {
+      & > span {
         text-align: left;
         display: block;
         margin-bottom: .5rem;
@@ -63,15 +67,22 @@ section {
         margin-bottom: 2rem;
       }
 
-      text-align: end;
-
-      & div[data-type="remover"]{
+      & div[data-type="remover"] {
         font: var(--font-paragraph-small);
         color: var(--content-secondary);
         border: none;
         background: none;
 
-        cursor: pointer;
+        
+
+        display: flex;
+        align-items: center;
+        justify-content: end;
+
+        & span:hover {
+          cursor: pointer;
+          color: #6f6d72;
+        }
       }
     }
 

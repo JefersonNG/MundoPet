@@ -2,7 +2,6 @@ import dayjs from "dayjs"
 import { api } from "../../service/apiConfig"
 import { hours } from "../../utils/hours"
 import { date as selectDate } from "./data"
-const modal = document.querySelector('#modal-form')
 
 const inputTime = document.querySelector('#hour-form')
 const hoursOpen = hours()
